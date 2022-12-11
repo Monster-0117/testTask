@@ -1,0 +1,2238 @@
+@font-face {
+    font-family: Philosopher;
+    src: url(../../../fonts/Philosopher-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Philosopher;
+    src: url(fonts/Philosopher-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+
+/*!sc*/
+
+html {
+    font-family: Inter;
+    color: rgba(0, 0, 0, 1);
+}
+
+
+/*!sc*/
+
+body {
+    padding: 0;
+    margin: 0;
+    overscroll-behavior: none;
+    /* overflow: hidden; */
+    /* background-color: rgba(255, 255, 255, 1); */
+}
+
+
+/*!sc*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-transform: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+    margin: 0;
+}
+
+
+/*!sc*/
+
+a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+
+/*!sc*/
+
+p {
+    margin: 0;
+}
+
+
+/*!sc*/
+
+button {
+    font-family: Inter;
+}
+
+
+/*!sc*/
+
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+.brand-container {
+    position: relative;
+    width: 100vw;
+    height: 300vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+.module {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid white;
+    background-image: url(./bg.jpg);
+    background-size: 100% 100%;
+    transform: scale(1.07, 1.07);
+    background-repeat: no-repeat;
+    user-select: none;
+    position: fixed;
+    transition: transform 0.02s;
+    top: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.module>.bottle {
+    position: absolute;
+    top: 50px;
+    height: calc(100% - 90px);
+    transform: translate(50%, 0);
+    right: 22vw;
+    transform: scale(1, 1);
+    /* transition: transform 0.5s; */
+}
+
+.module>.rock {
+    position: absolute;
+    bottom: -15px;
+    right: -60px;
+    /* transform: translate(50%, 0); */
+    height: 100vh;
+    /* transition: transform 0.5s; */
+}
+
+.cetLol {
+    position: fixed;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 3.7708333333333333vw 5.0895833333333335vw;
+    background-color: transparent;
+    z-index: 5;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+@media(max-width:1440px) {
+    .cetLol {
+        padding: 3.083333333333333vw 5.4895833333333335vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:992px) {
+    .cetLol {
+        padding: 3.024193548387097vw 4.557291666666666vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:375px) {
+    .cetLol {
+        padding: 3.4666666666666663vw 4vw;
+    }
+}
+
+
+/*!sc*/
+
+.cetLol:before {
+    content: '';
+    position: absolute;
+    padding: 1.7708333333333333vw 3.4895833333333335vw;
+}
+
+
+/*!sc*/
+
+.cetLol.contrast {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+
+/*!sc*/
+
+.cetLol.contrast>a svg {
+    fill: rgba(136, 136, 136, 1);
+    opacity: 0.5;
+}
+
+.cetLol>a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 3;
+}
+
+
+/*!sc*/
+
+.cetLol>a svg {
+    width: 9.6875vw;
+    height: 2.03125vw;
+    fill: rgba(255, 255, 255, 1);
+    -webkit-transition: fill 0.25s, opacity 0.25s;
+    transition: fill 0.25s, opacity 0.25s;
+}
+
+@media(max-width:1440px) {
+    .cetLol>a svg {
+        width: 9.027777777777777vw;
+        height: 2.083333333333333vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:992px) {
+    .cetLol>a svg {
+        width: 12.600806451612904vw;
+        height: 2.82258064516129vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:375px) {
+    .cetLol>a svg {
+        width: 23.733333333333334vw;
+        height: 5.066666666666666vw;
+    }
+}
+
+.cetLol>a svg:hover {
+    opacity: 0.7;
+    fill: rgba(255, 255, 255, 1);
+}
+
+
+/*!sc*/
+
+.cetLol>nav {
+    margin-left: 10.416666666666668vw;
+    margin-right: auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: Inter;
+    line-height: 1;
+    font-weight: 600;
+}
+
+@media (min-width:768px) {
+    .cetLol>nav {
+        font-size: calc(12px + 3 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .cetLol>nav {
+        font-size: calc(15px + 3 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .cetLol>nav {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .cetLol>nav {
+        margin-left: 8.333333333333332vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1200px) {
+    .cetLol>nav {
+        margin-left: auto;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:992px) {
+    .cetLol>nav {
+        display: none;
+    }
+}
+
+data-styled.g9[id="Headerstyled__Container-sc-xdxgwq-0"] {
+    content: "cetLol,"
+}
+
+.navbar {
+    margin-right: 1.8229166666666667vw;
+    color: rgba(245, 245, 245, 1);
+    opacity: 0.6;
+    cursor: pointer;
+    -webkit-transition: color 0.25s, opacity 0.25s;
+    transition: color 0.25s, opacity 0.25s;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .navbar {
+        margin-right: 1.3888888888888888vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1200px) {
+    .navbar {
+        margin-right: 0.8333333333333334vw;
+    }
+}
+
+
+/*!sc*/
+
+.navbar:last-child {
+    margin-right: 0;
+}
+
+
+/*!sc*/
+
+.navbar:hover {
+    opacity: 1;
+}
+
+.active {
+    margin-right: 1.8229166666666667vw;
+    color: rgba(245, 245, 245, 1);
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transition: color 0.25s, opacity 0.25s;
+    transition: color 0.25s, opacity 0.25s;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .active {
+        margin-right: 1.3888888888888888vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1200px) {
+    .active {
+        margin-right: 0.8333333333333334vw;
+    }
+}
+
+
+/*!sc*/
+
+.active:last-child {
+    margin-right: 0;
+}
+
+
+/*!sc*/
+
+.active:hover {
+    opacity: 1;
+}
+
+.container {
+    visibility: visible;
+}
+
+
+/*!sc*/
+
+.container .Plugstyled__Container-sc-pr49gx-0 {
+    display: none;
+    visibility: hidden;
+}
+
+
+/*!sc*/
+
+@media screen and (orientation:landscape) and (max-height:768px) and (max-width:1024px) {
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+    }
+    .container .Plugstyled__Container-sc-pr49gx-0 {
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+/*!sc*/
+
+data-styled.g24[id="Layoutstyled__HorizonWrapper-sc-9kyrhr-3"] {
+    content: "container,"
+}
+
+.contact {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .contact {
+        margin-left: 0.6944444444444444vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:992px) {
+    .contact {
+        display: none;
+    }
+}
+
+
+/*!sc*/
+
+.contact {
+    font-size: 10px;
+    font-family: Inter;
+    line-height: 1;
+    font-weight: 600;
+    color: rgba(245, 245, 245, 1);
+    -webkit-transition: color 0.25s, opacity 0.25s;
+    transition: color 0.25s, opacity 0.25s;
+}
+
+.contact>div {
+    opacity: 0.6;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .contact a {
+        font-size: calc(12px + 3 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .contact a {
+        font-size: calc(15px + 3 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .contact a {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .contact div {
+        font-size: calc(12px + 0 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .contact div {
+        font-size: calc(12px + 0 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .contact div {
+        font-size: calc(0.3125vw + 0.5555555555555556vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .contact div {
+        margin-top: 0.2777777777777778vw;
+    }
+}
+
+.buy {
+    padding: 0.625vw 2.864583333333333vw;
+    margin-left: 2.083333333333333vw;
+    border: 1px solid transparent;
+    border-radius: 1.5625vw;
+    font-size: 10px;
+    font-family: Inter;
+    line-height: 1;
+    font-weight: 600;
+    color: rgba(245, 245, 245, 1);
+    background-color: rgba(61, 122, 104, 1);
+    cursor: pointer;
+    -webkit-transition: color 0.25s, background-color 0.2s;
+    transition: color 0.25s, background-color 0.2s;
+    z-index: 2 !important;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .buy {
+        font-size: calc(12px + 3 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .buy {
+        font-size: calc(15px + 3 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .buy {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .buy {
+        padding: 0.8333333333333334vw 2.8472222222222223vw;
+        margin-left: 1.875vw;
+        border-radius: 30px;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:992px) {
+    .buy {
+        padding: 1.0080645161290323vw 4.166666666666666vw;
+        margin-left: auto;
+        color: rgba(57, 57, 57, 1);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:768px) {
+    .buy {
+        padding: 1.0416666666666665vw 4.166666666666666vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:576px) {
+    .buy {
+        padding: 1.3888888888888888vw 4.340277777777778vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:375px) {
+    .buy {
+        padding: 2.1333333333333333vw 5.333333333333334vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(min-width:992px) {
+    .buy:hover {
+        color: rgba(57, 57, 57, 1);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+data-styled.g24[id="Layoutstyled__HorizonWrapper-sc-9kyrhr-3"] {
+    content: "hpHOon,"
+}
+
+.brand-first-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    color: rgba(245, 245, 245, 1);
+    transition: all 0.3s;
+}
+
+
+/*!sc*/
+
+.brand-first-container>div {
+    width: 37.5vw;
+    position: relative;
+    top: 17.708333333333336vw;
+    left: 11.458333333333332vw;
+    opacity: 1;
+    /* -webkit-transition: opacity 1s ease-in-out 600ms; */
+    /* transition: opacity 1s ease-in-out 600ms; */
+}
+
+
+/*!sc*/
+
+.brand-first-container div h1 {
+    position: relative;
+    width: 100%;
+    font-size: 70px;
+    font-family: Philosopher;
+    line-height: 1.2;
+    font-weight: 700;
+    -webkit-letter-spacing: 0.03em;
+    -moz-letter-spacing: 0.03em;
+    -ms-letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 1.0416666666666665vw;
+    text-align: center;
+    color: rgba(245, 245, 245, 1);
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .brand-first-container div h1 {
+        font-size: calc(105px + 20 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .brand-first-container div h1 {
+        font-size: calc(125px + 45 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .brand-first-container div h1 {
+        font-size: calc(4.427083333333334vw + 7.87037037037037vh);
+    }
+}
+
+
+/*!sc*/
+
+.brand-first-container div h1 sup {
+    font-weight: 300;
+    position: absolute;
+    -webkit-transform: translate(25%, 105%);
+    -ms-transform: translate(25%, 105%);
+    transform: translate(25%, 105%);
+    font-size: 15px;
+    font-family: Philosopher;
+    line-height: 1.2;
+    font-weight: 500;
+    color: rgba(245, 245, 245, 0.5);
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .brand-first-container div h1 sup {
+        font-size: calc(19px + 4 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .brand-first-container div h1 sup {
+        font-size: calc(23px + 7 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .brand-first-container div h1 sup {
+        font-size: calc(0.78125vw + 1.3888888888888888vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .brand-first-container div h1 sup {
+        -webkit-transform: translate(25%, 95%);
+        -ms-transform: translate(25%, 95%);
+        transform: translate(25%, 95%);
+    }
+}
+
+
+/*!sc*/
+
+.brand-first-container div p {
+    width: 100%;
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 1.2;
+    font-weight: 600;
+    -webkit-letter-spacing: 0.3em;
+    -moz-letter-spacing: 0.3em;
+    -ms-letter-spacing: 0.3em;
+    letter-spacing: 0.3em;
+    color: rgba(245, 245, 245, 1);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .brand-first-container div p {
+        font-size: calc(16px + 2 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .brand-first-container div p {
+        font-size: calc(18px + 8 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .brand-first-container div p {
+        font-size: calc(0.6770833333333334vw + 1.2037037037037037vh);
+    }
+}
+
+
+/*!sc*/
+
+.brand-first-container span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3.125vw;
+    width: 100%;
+    /* -webkit-transition: opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out; */
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .brand-first-container span {
+        bottom: 5.208333333333334vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:768px) {
+    .brand-first-container span {
+        bottom: 4.557291666666666vw;
+    }
+}
+
+
+/*!sc*/
+
+.brand-first-container span>svg {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1.0416666666666665vw;
+    height: 3.177083333333333vw;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .brand-first-container span>svg {
+        width: 15px;
+        height: 46px;
+    }
+}
+
+
+/*!sc*/
+
+.brand-first-container span .Depthstyled__DepthSlideScroll-sc-17w6bfo-2 {
+    top: 0;
+    left: 0;
+}
+
+.fGpnDa #cssda-badge {
+    position: absolute;
+    top: unset;
+    right: unset;
+    left: 4.166666666666667vw;
+    bottom: 4.166666666666667vw;
+    width: 3.125vw;
+    height: 3.125vw;
+    border-radius: 60px;
+    background: #ededed;
+    -webkit-transition: all 0.25s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -moz-transition: all 0.25s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -webkit-transition: all 0.25s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    transition: all 0.25s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    cursor: pointer;
+    z-index: 9;
+}
+
+
+/*!sc*/
+
+.fGpnDa #cssda-badge:hover {
+    -webkit-animation: bounce 0.75s linear both;
+    -moz-animation: bounce 0.75s linear both;
+    -webkit-animation: bounce 0.75s linear both;
+    animation: bounce 0.75s linear both;
+    background: #673ab7;
+}
+
+
+/*!sc*/
+
+.fGpnDa #cssda-badge svg {
+    position: absolute;
+    width: 3.125vw;
+    height: 3.125vw;
+    fill: #000000;
+}
+
+
+/*!sc*/
+
+.fGpnDa #cssda-badge:hover svg {
+    fill: #ededed;
+}
+
+
+/*!sc*/
+
+.fGpnDa .cssda-badge-content {
+    position: absolute;
+    top: unset;
+    left: unset;
+    width: 3.125vw;
+    height: 3.125vw;
+    -webkit-transition: all 0.12s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -moz-transition: all 0.12s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    -webkit-transition: all 0.12s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+    transition: all 0.12s cubic-bezier(0.615, 0.19, 0.305, 0.91);
+}
+
+
+/*!sc*/
+
+.fGpnDa #cssda-badge:hover .cssda-badge-content {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
+/*!sc*/
+
+.fGpnDa #cssda-badge:hover #cssda-badge-logo {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/*!sc*/
+
+@media only screen and (max-width:700px) {
+    .fGpnDa #cssda-badge {
+        left: 4vw;
+        bottom: 4vw;
+        width: 40px;
+        height: 40px;
+    }
+    .fGpnDa #cssda-badge svg {
+        width: 40px;
+        height: 40px;
+    }
+    .fGpnDa #cssda-badge-logo {
+        -webkit-transform: scale(1.35);
+        -moz-transform: scale(1.35);
+        -webkit-transform: scale(1.35);
+        -ms-transform: scale(1.35);
+        transform: scale(1.35);
+    }
+    .fGpnDa #cssda-badge:hover #cssda-badge-logo {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    .fGpnDa #cssda-badge-title {
+        display: none;
+    }
+    .fGpnDa #cssda-badge-award {
+        display: none;
+    }
+}
+
+
+/*!sc*/
+
+@-webkit-keyframes bounce {
+    .fGpnDa 0% {
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 3.4% {
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 4.7% {
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 6.81% {
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 9.41% {
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 10.21% {
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 13.61% {
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 14.11% {
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 17.52% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 18.72% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 21.32% {
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 24.32% {
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 25.23% {
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 29.03% {
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 29.93% {
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 35.54% {
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 36.74% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 41.04% {
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 44.44% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 52.15% {
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 59.86%,
+    .fGpnDa 63.26% {
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    .fGpnDa 100%,
+    .fGpnDa 75.28%,
+    .fGpnDa 85.49%,
+    .fGpnDa 90.69% {
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+
+/*!sc*/
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    3.4% {
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    4.7% {
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    6.81% {
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    9.41% {
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    10.21% {
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    13.61% {
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    14.11% {
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    17.52% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    18.72% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    21.32% {
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    24.32% {
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    25.23% {
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    29.03% {
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    29.93% {
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    35.54% {
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    36.74% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    41.04% {
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    44.44% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    52.15% {
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    59.86%,
+    63.26% {
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    100%,
+    75.28%,
+    85.49%,
+    90.69% {
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+
+/*!sc*/
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    3.4% {
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.032, 0, 0, 0, 0, 1.041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    4.7% {
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.045, 0, 0, 0, 0, 1.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    6.81% {
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.066, 0, 0, 0, 0, 1.089, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    9.41% {
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.088, 0, 0, 0, 0, 1.117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    10.21% {
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.094, 0, 0, 0, 0, 1.123, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    13.61% {
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.112, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    14.11% {
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.114, 0, 0, 0, 0, 1.133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    17.52% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.124, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    18.72% {
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.121, 0, 0, 0, 0, 1.119, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    21.32% {
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.12, 0, 0, 0, 0, 1.107, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    24.32% {
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.115, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    25.23% {
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.113, 0, 0, 0, 0, 1.094, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    29.03% {
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.106, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    29.93% {
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.105, 0, 0, 0, 0, 1.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    35.54% {
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.098, 0, 0, 0, 0, 1.096, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    36.74% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.098, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    41.04% {
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.096, 0, 0, 0, 0, 1.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    44.44% {
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.097, 0, 0, 0, 0, 1.103, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    52.15% {
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.099, 0, 0, 0, 0, 1.101, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    59.86%,
+    63.26% {
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.101, 0, 0, 0, 0, 1.099, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    100%,
+    75.28%,
+    85.49%,
+    90.69% {
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -ms-transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
+
+.idLlUT {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    color: rgba(255, 255, 255, 1);
+    padding: 17.1875vw 11.354166666666666vw;
+}
+
+
+/*!sc*/
+
+.idLlUT:nth-child(2) {
+    top: 100vh;
+}
+
+
+/*!sc*/
+
+.idLlUT:nth-child(3) {
+    top: 200vh;
+    height: 110vh;
+}
+
+.hbHaTV {
+    width: 45.3125vw;
+}
+
+
+/*!sc*/
+
+.hbHaTV h2 {
+    font-size: 26px;
+    font-family: Philosopher;
+    line-height: 1.25;
+    font-weight: 400;
+    -webkit-letter-spacing: 0.03em;
+    -moz-letter-spacing: 0.03em;
+    -ms-letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
+    color: rgba(245, 245, 245, 1);
+    width: 100%;
+    margin-bottom: 3.125vw;
+    text-transform: uppercase;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .hbHaTV h2 {
+        font-size: calc(35px + 5 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .hbHaTV h2 {
+        font-size: calc(40px + 15 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .hbHaTV h2 {
+        font-size: calc(1.4322916666666665vw + 2.5462962962962963vh);
+    }
+}
+
+
+/*!sc*/
+
+.hbHaTV div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1.8229166666666667vw;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .hbHaTV div {
+        width: 45.13888888888889vw;
+    }
+}
+
+
+/*!sc*/
+
+.hbHaTV div p {
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 1.45;
+    font-weight: 400;
+    color: rgba(245, 245, 245, 1);
+    -webkit-flex: 0 1 48%;
+    -ms-flex: 0 1 48%;
+    flex: 0 1 48%;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .hbHaTV div p {
+        font-size: calc(15px + 1 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .hbHaTV div p {
+        font-size: calc(16px + 2 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .hbHaTV div p {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+.hbHaTV span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*!sc*/
+
+.hbHaTV span svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*!sc*/
+
+.hbHaTV span p {
+    width: 13.802083333333334vw;
+    font-size: 15px;
+    font-family: Inter;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-left: 0.9375vw;
+    color: rgba(245, 245, 245, 1);
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .hbHaTV span p {
+        font-size: calc(16px + 0 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .hbHaTV span p {
+        font-size: calc(16px + 2 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .hbHaTV span p {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1600px) {
+    .hbHaTV span p {
+        width: 16.5625vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .hbHaTV span p {
+        width: 18.40277777777778vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1280px) {
+    .hbHaTV span p {
+        width: 20.703125vw;
+    }
+}
+
+.iNwzG {
+    width: 45.3125vw;
+}
+
+
+/*!sc*/
+
+.iNwzG h2 {
+    font-size: 26px;
+    font-family: Philosopher;
+    line-height: 1.25;
+    font-weight: 400;
+    -webkit-letter-spacing: 0.03em;
+    -moz-letter-spacing: 0.03em;
+    -ms-letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
+    color: rgba(245, 245, 245, 1);
+    width: 100%;
+    margin-bottom: 3.125vw;
+    text-transform: uppercase;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .iNwzG h2 {
+        font-size: calc(35px + 5 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .iNwzG h2 {
+        font-size: calc(40px + 15 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .iNwzG h2 {
+        font-size: calc(1.4322916666666665vw + 2.5462962962962963vh);
+    }
+}
+
+
+/*!sc*/
+
+.iNwzG div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1.8229166666666667vw;
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .iNwzG div {
+        width: 45.13888888888889vw;
+    }
+}
+
+
+/*!sc*/
+
+.iNwzG div p {
+    font-size: 14px;
+    font-family: Inter;
+    line-height: 1.45;
+    font-weight: 400;
+    color: rgba(245, 245, 245, 1);
+    -webkit-flex: 0 1 80%;
+    -ms-flex: 0 1 80%;
+    flex: 0 1 80%;
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .iNwzG div p {
+        font-size: calc(15px + 1 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .iNwzG div p {
+        font-size: calc(16px + 2 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .iNwzG div p {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+.iNwzG span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*!sc*/
+
+.iNwzG span svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*!sc*/
+
+.iNwzG span p {
+    width: 24.166666666666668vw;
+    font-size: 15px;
+    font-family: Inter;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-left: 0.9375vw;
+    color: rgba(245, 245, 245, 1);
+}
+
+
+/*!sc*/
+
+@media (min-width:768px) {
+    .iNwzG span p {
+        font-size: calc(16px + 0 * (100vw - 768px) / (1440 - 768));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1440px) {
+    .iNwzG span p {
+        font-size: calc(16px + 2 * (100vw - 1440px) / (1920 - 1440));
+    }
+}
+
+
+/*!sc*/
+
+@media (min-width:1920px) {
+    .iNwzG span p {
+        font-size: calc(0.46875vw + 0.8333333333333334vh);
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1600px) {
+    .iNwzG span p {
+        width: 27.8125vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1440px) {
+    .iNwzG span p {
+        width: 29.51388888888889vw;
+    }
+}
+
+
+/*!sc*/
+
+@media(max-width:1280px) {
+    .iNwzG span p {
+        width: 33.203125vw;
+    }
+}
+
+Hi Raghu. How are you? This is Dai Katsu from Japan who have rich experience in Software development. I am very interested in this company and hope to work with you in the long term. As you can see in my documents (attached),
+I have worked on several companies so far and already finished many projects with my rich experience. So If you need my work for this company,
+I hope to discuss for that soon. Thanks & Best regards. Dai Interesting ⭐ Hi,
+How are you today? ⭐ I am very interested and hope to work with you for the long term because your company needs up-to-date skills that I am very familiar with. As you can see in my profile,
+I have rich experience with 7 years. So I think I can fulfill all of your requirements if you choose me for your business. By the way,
+If you have some time for me,
+I hope to discuss this position with you soon. Have a good time. -------------------------- freelancer ----------------------- ⭐Great. That is just my major skill's project⭐Immediately starting & Quickly completing⭐ 
+ Hi,
+How are you? I can perform all of your requirements with my rich experience in this field (plz check my profile for the best understanding of my background). If you choose me for your business,
+I can start immediately and can finish it asap. Then Will wait for your reply anytime. I hope to discuss this project soon. Thanks & Best regards. --------------------------------------- ⭐ Immediately starting ⭐ Quickly completing ⭐ Hi,
+How are you? Already checked the job description in detail and I know what you want well. I wish to work on this position in the future and if you can discuss it with me,
+I will appreciate for you. Rich Experience in: - Shopify Plus with Ruby script - CRO AB test - Speed/SEO optimization with Lighthouse,
+- GTM,
+CRO pixel code integration - Shopify app integration(ReCharge, Metafield, Product filter & search app),
+etc. - 3rd party app integration(Landbot, Tidio, etc) Familiar with: - Shopify theme 2.0 / JSON / template structure (New version) - Shopify Theme Builder & Compiling tools (ThemeKit, CLI, Gulp, Slate theme builder) - VCS: Version Control System (Github, Gitlab) Hope to hearing good news from you soon. Have a great time. Best,
+Regards. ---------------------------------------------------------- Hi Dear. How are you? As you can see in my profile,
+I am a good fit for your Job as a senior web developer that have 7 years of experience. I wish to work on this position in the future and if you can discuss it with me,
+I will appreciate for you. Hope to hearing form you soon. Thanks. Have a good day. -------------------------------------------------------------------- Bigstarcoolmanager Hi. How are you? Already checked your job description in detail and I know what you want well. As you can see in my CV,
+I can provide all services and skills that you want. If you have more requirements or questions for me,
+please contact me anytime. Hope to hearing good news from you soon. Have a great time. Best,
+Regards. ------------------------------------------------------------------------ Hi everyone,
+How are you? Let me introduce myself. My name is Anthony Pentheus from Germany. I hope to work on Storetasker as an individual Shopify developer in the long term. Already worked in several companies from startups to multi-vendors so far,
+mainly as a Shopify developer and Fullstack developer for 7 years. My best experience in this area in particular is working as a Shopify developer for Eagoats,
+an American company. In the meantime,
+I have got rich experience in building online stores by analyzing and monitoring customer experience and performing search engine optimization. Also,
+I could maximize my client's income by tracking store sales and customer visits.
+ By the way,
+I'm ready to work now, so if anyone chooses me for the business, I can perform all their needs based on my rich experience in this field.
+ That's all for my introduction.
+ Thanks for your time. Good Bye. ------------------------------------------------------------------------- Blockchain team "Blockchain is very mystery and smart world" Hello Dear Client. How are you and your business? We read your project description carefully and understood everything what you want. We have 5 years of experience in web development and Blockchain with 3 persons who have experience in this field development. Special: Solana,
+Web3.js,
+React,
+TypeScript,
+Node,
+Vue,
+Angular,
+Algorand,
+Smart Contract,
+Solidity,
+NFT Marketplace and React,
+Node so on.We have developed some similar projects with your project before. So we can complete this project clear and fast. If you award this project to me,
+you can get a cool result. We are online most of our time,
+so can quickly communicate with you. Could you discuss your project with us now? We are waiting for your nice reply now. *These are our past works. https: //koalaintelligence.agency
+https: //shroomz.cool
+https: //ethereummax.org/
+Thank you for your time. From BIG-STAR Team. alone blockchain Hi. How are you and your family? I have built more smart contracts using ERC-20 and ERC-721 custom tokens which will work on Polygon,
+Ethereum,
+Binance Smart Chain,
+Solana,
+and Algorand and I was responsible for building NFT Marketplace and created custom tokens using openzepplin,
+implemented MetaMask,
+Torus,
+and other wallets to increase user experience. Special: Ether.js,
+Web3.js,
+React,
+Next,
+Nest,
+TypeScript,
+Node,
+Vue,
+Angular,
+Solidity,
+Node,
+Rust,
+Pyteal,
+Git,
+Jira,
+Slack,
+Discord,
+Telegram,
+and so on. Supports decisive fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in harmony with fashion,
+style,
+gorgeousness,
+and delicacy. I hope to work for your company so if you choose me,
+I can work 40+hours per week in your Time zone,
+and guarantee high quality on your deadline. I am looking forward to hearing from you. Thank you for your time. React.js Hi. How are you and your family? I am a senior Frontend developer that has 8+years of experience. Also,
+I have rich experience as a project manager for 2years. Skills: React,
+Angular,
+Vue,
+Ruby,
+Ruby on Rails,
+Redux,
+Next,
+Node,
+TypeScript,
+OOP,
+Express,
+MySQL,
+NoSQL,
+GraphQL Material UI,
+Tailwind CSS,
+Flexible Responsive,
+Pixel-Perfect. Project tools - Git,
+Slack,
+Jira,
+Postman,
+and so on. DevOps - GCP,
+AWS,
+Azure. Unit test - Jest,
+Mocha,
+Junit,
+etc. Supports strong fashion and business style,
+and you can build the perfect front end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness,
+and delicacy are in harmony. So I hope to work for a nice client like you and I am ready to work immediately. I hope to work for your company so if you choose me,
+I can work 40+hours per week in your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. MERN Stack Hello,
+How are you and family? I have worked as a Full-Stack developer using MERN stack. We have complicated API,
+several servers written on Node.js/Express and React/Redux front-end part. Also I can work 40+hours per week on your Timezone,
+and guarantee high quality on your deadline. Could you discuss your project with me now? I am waiting for your reply now. Thank you very much for your time. wooCommerce "Client's success is just my happiness" Hello,
+Dear Client. How are you and family? As a senior developer in Shopify,
+WooCommerce,
+eCommerce,
+I have done many theme installation and customization. Supports strong fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness and delicacy are in harmony. I am also familiar with Woocommerce and designed more than 45+websites on WordPress+Woocomerce platforms using the WordPress themes like Avada,
+Xtheme,
+Divi,
+Enfold etc. WordPress+Theme customization+Plug-in integration and customization+Graphic Design+Photoshop+HTML/CSS/CMS/PHP+Ecommerce. Could you discuss your project with me now? I am waiting for your reply with my a good idea for you. Thank you for your time. General "Client's success is just my happiness" Hello,
+Dear Client. How are you and your family? As you can see in my profile,
+I am an expert in Full-stack with 5years. I have read your detail deeply and I know what you want. So I hope to work for a nice client like you. If you hire me,
+I will perform all of your requirement perfectly with my high-skill and warm-heart. Then you will just success. Could you discuss your project with me now? I am waiting for your reply now. Thank you for your time. Angular "Client's success is just my happiness" Hi Dear I see that you need a full-time developer who can handle Angular project creation,
+build cycle,
+deployment and testing. Have been using Angular for years,
+and have some projects from several clients where I played as a main developer. Recently,
+I have completed 1 project with blockchain technology for exchange & token development for a client from Greece. But I am still at a primary level in blockchain technology but have strong knowledge in Typescript,
+Component Model and SPA theory. Another one from italian client for runnerschool italy. you can type google chrome with runnerschoolitalia,
+then you can see the first results ! here goes there urls: htps: //runnerschoolitalia.com
+htps: //savelly.de
+I can provide you the followings. 1. Angular project creation 2. deploy to AWS,
+GoDaddy,
+or Siteground 3. GitHub with CircleCI 4. Angular Unit test I Can start your project immediately and looking forward to work with you. Could you discuss your project with me? I am waiting for your nice reply now. Thank you for your time. Frontend "Client's success is just my happiness" Hi. How are you and your family? I am a good fit for your Job as a senior web developer that have 7 years of experience in website development. Web design and Website building is the best ability. Supports strong fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness and delicacy are in harmony. I like to use GIT (we are using Bitbucket) Jira,
+Slack very much. Here is website developed by me: React website: https: //farmskins.com/
+Vue.js website: https: //bookyourwellness.com/#/home
+Laravel website: https: //www.goldenhome.gr/property/index
+Shopify website: https: //Shein.com
+https: //saboskirt.com/
+Angular website: https: //mysa.ae/ ( Salon Spa Beauty Center) (Angular 8.1.3, Bootstrap,Moment.js)
+wooCommerce website: https: //www.profateliminator.com/
+WordPress website: www.4BusinessGroup.com.au React-native: https: //play.google.com/store/apps/details?id=com.ridecharge.android.taximagic
+https: //apps.apple.com/us/app/curb-the-taxi-app/id299226386
+https: //play.google.com/store/apps/details?id=com.grubbucks
+https: //apps.apple.com/in/app/grubbucks-inc/id1404189705
+I am interested in your job and I am ready to thought immediately. I am absolutely sure I can help you very well. Also I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Could you discuss your project with me? I am waiting for your nice reply. Thank you for your time. WordPress Hi. How are you and your family? I am a professional website developer and WordPress expert. I have rich experience in Website Design and Development,
+Integration payment gateway,
+Integration translation feature,
+Theme Customization & Optimization,
+Load Fast,
+PHP,
+MySQL,
+CSS,
+plugin customization,
+SEO,
+etc. Web design and Website building is the best ability. Supports strong fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness and delicacy are in harmony. https: //www.the-cradle.de/
+https: //needleandthread.com
+http: //www.skandayoga.com
+http: //www.lismarmosquera.com
+https: //www.tiffany.com
+I hope to work for your company so if you choose me,
+I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. HTML,
+CSS Hello,
+How are you and your family? I am a Frontend developer with 7 years. I have checked your job description carefully and I know what you want very well. I have rich experience in PHP,
+WordPress,
+React,
+Next,
+Vue,
+Angular,
+Laravel,
+JavaScript,
+HTML5,
+and CSS3,
+SCSS,
+Bootstrap4,
+5,
+Tailwind CSS,
+Docker and so on I have worked on many Figma2HTML,
+PSD2HTML,
+PDF2HTML,
+Responsive,
+Pixel-Perfect projects before,
+so I can complete your project perfectly. Project tools - Git,
+Slack,
+Jira,
+Postman and so on. Devops - GCP,
+AWS,
+Azure. Unit test - Jest,
+Mocha,
+Junit,
+etc. I hope to work for your company so if you choose me,
+I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. These are my past works https: //stayglam.com/
+https: //marysia.com/
+https: //www.sonder.com/
+https: //sentral.com/
+https: //www.hellolanding.com/
+https: //www.hellotend.com/
+Vue.js,
+Nuxt.js Hi. How are you and your family? I am a senior full stack web developer with extensive experience in Vue.js,
+Vue 3,
+Vuefy,
+Vuex,
+Nest,
+React,
+GraphQL,
+MongoDB,
+HTML,
+CSS3,
+SCSS Laravel,
+Bootstrap,
+TailwindCSS,
+Node. Nuxt,
+Express JS. Project tools - Git,
+Slack,
+Jira,
+Postman and so on. Devops - GCP,
+AWS,
+Azure. Unit test - Jest,
+Mocha,
+Junit,
+etc. Supports strong fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness and delicacy are in harmony. These are my past works. Ract website: https: //farmskins.com/ 
+Vue.js website: https: //bookyourwellness.com/#/home
+I hope to work for your company so if you choose me,
+I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. MERN Stack "MERN Stack is the best technology!" Hello,
+Dear Client. How are you and family? I have rich experienced in MERN stack (MongoDB, Express.js, React.js, Node.js). Of course,
+As you can see in my profile,
+I am an expert in Full stact: DataBase: - MySQL - MongoDB - Firebase PHP Framework: - Laravel - CodeIgniter ... This is my past work: https: //farmskins.com/
+http: //www.ezwin168.com/
+https: //thunderpick.com/en/  
+https: //www.getmyboat.com/
+Also I can work 40+hours per week on your Timezone,
+and guarantee high quality on your deadline. Could you discuss your project with me now? I am waiting for your reply now. Thank you very much for your time. Angular+MERN Hi,
+How are you and family? I am a senior web developer that have rich experience in Angular,
+.Net,
+Nest,
+Vue,
+MERN stack (MongoDB, Express.js, React.js, Node.js),
+Tailwind CSS,
+Bootstrap,
+JavaScript and so on. I can provide you the followings. 1. Angular project creation 2. deploy to AWS,
+GoDaddy,
+or Siteground 3. GitHub with CircleCI 4. Angular & MERN stack Unit test This is my past work: 1. https: //www.familysearch.org/ (Family Tree Management) (Angular 2, NodeJS, JavaScript, MongoDB)
+2. https: //soqqle.com/ ( Online Education Social Game Platform) ( React JS, Node JS, Material CSS, Socket,io, MongoDB)
+3. https: //mysa.ae/ ( Salon Spa Beauty Center) (Angular 8.1.3, Bootstrap,Moment.js)
+4. https: //winmall.ae/ ( latest campaigns and exciting prizes Web application) ( Angular 10.1, Bootstrap 4, IONIC web, jQuery)
+5. https: //istar.soccer/pages/login (Sports Team Management Software) (Angular 4, NodeJS)
+I hope to work for your company so if you choose me,
+I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you very much for your time. Mobile App Hello,
+Dear My Client. How are you and your family? I am a good fit for your project as a senior Web & App developer that have 7 years of experience. App building and Website building is the best ability. Supports strong fashion and business style,
+you can build the perfect front end and back end. I provide my customers with the best products in which fashion,
+style,
+gorgeousness and delicacy are in harmony. I like to use GIT (we are using Bitbucket) Jira,
+Slack very much. Here is website developed by me: https: //apps.apple.com/in/app/grubbucks-inc/id1404189705
+https: //play.google.com/store/apps/details?id=com.mason.wooplus
+https: //play.google.com/store/apps/details?id=com.jaumo.casual
+https: //play.google.com/store/apps/details?id=com.osmosestores
+https: //apps.apple.com/us/app/osmose-store/id1441295049
+http: //findmysuperhero.com/landing
+I am interested in your job and I am ready to thought immediately. I am absolutely sure I can help you very well. Also I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Could you discuss your project with me? I am waiting for your nice reply. Thank you for your time. Smartcontract Hi. How are you and your family? I read your job description carefully and understood everything what you want. I have built more smart contracts using ERC-20 and ERC-721 custom tokens which will work on Ethereum,
+Binance Smart Chain and I was responsible for building NFT Marketplace and created custom tokens using openzepplin,
+implemented MetaMask,
+Torus and other wallets to increase user experience. These are my pastworks https: //mist.game/nft-marketplace
+I hope to work for your company so if you choose me,
+I can work 40+hours per week on your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. PHP - Laravel Hi. How are you and your family? I am a senior web developer with 7years. Skills: PHP,
+Laravel,
+Yii,
+CodeIgniter,
+Symfony framework,
+MySQL,
+MongoDB,
+OOP/OOD,
+Rect,
+Vue,
+Angular,
+Webpack,
+JavaScript,
+HTML,
+Tailwind CSS,
+Integration APIs,
+Docker. Project tools - Git,
+Slack,
+Jira,
+Postman,
+and so on. DevOps - GCP,
+AWS,
+Azure. Unit test - Jest,
+Mocha,
+Junit,
+etc. I provide my customers with the best products in which fashion,
+style,
+gorgeousness,
+and delicacy are in harmony. Here is the website developed by me: PHP project (User Dashboard + Admin Dashboard) https: //www.mydriverboost.com/
+Laravel+Tailwind CSS (App-Admin Dashboard) https: //instadrink.com/
+I hope to work for your company so if you choose me,
+I can work 40+hours per week in your Time zone,
+and guarantee high quality on your deadline. Looking forward to hearing from you. Thank you for your time. I left my latest company by COVID but I am fine very well now. And development is my Dream. This time,
+after suffering from Corona,
+I am suffering from earache as a sequelae. I can't hear you very well, I' d appreciate it if you could understand.
